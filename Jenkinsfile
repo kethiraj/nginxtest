@@ -19,9 +19,9 @@ pipeline {
     }
     post {
         always {
-            emailext body: "${DEFAULT_CONTENT}",
+            emailext body: "${Default Content}",
                 recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                subject: "${DEFAULT_SUBJECT}"
+                subject: "${Default Subject}"
         }
     }
 }
