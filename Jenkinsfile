@@ -9,7 +9,7 @@ pipeline {
         }
     }
     environment {
-        EMAIL_TO = 'someone@host.com'
+        EMAIL_TO = 'ethi90@gmail.com'
     }
     post {
         failure {
