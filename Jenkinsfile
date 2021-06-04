@@ -19,9 +19,9 @@ pipeline {
     }
     post {
         always {
-            emailext body: "${Default Content}",
+            emailext body: $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:,
                 recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                subject: "${Default Subject}"
+                subject: $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!
         }
     }
 }
