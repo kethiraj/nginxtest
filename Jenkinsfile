@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
       steps {
         script {
-           git branch: main url: 'https://github.com/kethiraj/nginxtest.git'
+           git branch: main, url: 'https://github.com/kethiraj/nginxtest.git'
           }
        }
     }
