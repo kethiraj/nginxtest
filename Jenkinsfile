@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Checkout') {
+      steps {
+        script {
+           git branch: main url: 'https://github.com/kethiraj/nginxtest.git'
+          }
+       }
+    }
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
