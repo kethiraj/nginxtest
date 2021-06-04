@@ -1,14 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout') {
-      steps {
-        script {
-           git url: 'https://github.com/kethiraj/nginxtest.git'
-           sh "ls -lart ./*" 
-        }
-       }
-    }
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
